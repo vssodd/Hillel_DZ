@@ -16,7 +16,8 @@ var arr = [
   }
 ];
 
-var reTrusted = /^[a-z0-9]+(\.[a-z0-9]+)?@(gmail\.com|yahoo\.com)$/i;
+var reTrusted = /^\w+(\.\w+)?@(gmail\.com|yahoo\.com)$/i;
+
 var reGarbage = /[<>\s]/g;
 
 var trustedEmails = [];
