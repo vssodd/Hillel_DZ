@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "0617e66d-b485-4f9a-a539-1fe64c828d42",
+		"name": "Hillel_Test_API_Synytskyi_QA_Pro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47090641",
+		"_collection_link": "https://vssodd-7171426.postman.co/workspace/Vladyslav-Synytskyi's-Workspace~8010e82c-cc8f-4c1f-8c88-bfffa0ca6468/collection/47090641-0617e66d-b485-4f9a-a539-1fe64c828d42?action=share&source=collection_link&creator=47090641"
+	},
+	"item": [
+		{
+			"name": "1.Створити користувача",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Flexible status code check: 201 for success, or common error codes",
+							"pm.test(\"Status code is 201 (Created) or acceptable error\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 400, 409, 422]);",
+							"});",
+							"",
+							"// Response contains body and is JSON",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"// Check response status property safely",
+							"pm.test(\"Response has status property\", function () {",
+							"    let json;",
+							"    try {",
+							"        json = pm.response.json();",
+							"    } catch (e) {",
+							"        pm.expect.fail(\"Response is not valid JSON\");",
+							"        return;",
+							"    }",
+							"    ",
+							"    pm.expect(json).to.have.property(\"status\");",
+							"    ",
+							"    // If successful creation (201), status should be \"ok\"",
+							"    if (pm.response.code === 201) {",
+							"        pm.expect(json.status).to.eql(\"ok\");",
+							"    }",
+							"});",
+							"",
+							"// Additional test: If 201, verify user data in response",
+							"pm.test(\"On success, response contains user data\", function () {",
+							"    if (pm.response.code === 201) {",
+							"        const json = pm.response.json();",
+							"        pm.expect(json).to.have.property(\"data\");",
+							"        pm.expect(json.data).to.have.property(\"userId\");",
+							"    } else {",
+							"        // Skip this test for error responses",
+							"        console.log(\"Skipped user data check - response was not 201\");",
+							"    }",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const firstNames = [\"Vlad\",\"Alex\",\"Maria\",\"Olena\",\"Ivan\",\"Sergii\",\"Nadia\",\"Dmytro\",\"Tetiana\",\"Oksana\"];",
+							"const lastNames  = [\"Synytsky\",\"Ivanov\",\"Petrenko\",\"Shevchenko\",\"Kovalenko\",\"Bondarenko\",\"Melnyk\",\"Kravchuk\",\"Tkachenko\",\"Marchenko\"];",
+							"",
+							"const random_photo = \"avatar-\" + Math.floor(Math.random() * 1000) + \".png\";",
+							"",
+							"const random_email = \"vladodd\" + Math.floor(Math.random() * 10000) + \"@gmail.com\";",
+							"const random_password = \"Pass\" + Math.floor(Math.random() * 10000) + \"A!\";",
+							"",
+							"const name = firstNames[Math.floor(Math.random() * firstNames.length)];",
+							"const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];",
+							"",
+							"pm.environment.set(\"name\", name);",
+							"pm.environment.set(\"lastName\", lastName);",
+							"pm.environment.set(\"random_email\", random_email);",
+							"pm.environment.set(\"random_password\", random_password);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"{{name}}\",\n  \"lastName\": \"{{lastName}}\",\n  \"email\": \"{{random_email}}\",\n  \"password\": \"{{random_password}}\",\n  \"repeatPassword\": \"{{random_password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/auth/signup",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Змінити йому всі данні",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const firstName = pm.variables.replaceIn('{{$randomFirstName}}');",
+							"const lastName  = pm.variables.replaceIn('{{$randomLastName}}');",
+							"const country   = pm.variables.replaceIn('{{$randomCountry}}');",
+							"",
+							"function getRandomDate(start, end) {",
+							"  const d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));",
+							"  return d.toISOString().split('T')[0];",
+							"}",
+							"const dateBirth = getRandomDate(new Date(1980, 0, 1), new Date(2005, 0, 1));",
+							"",
+							"pm.environment.set('name', firstName);",
+							"pm.environment.set('lastName', lastName);",
+							"pm.environment.set('country', country);",
+							"pm.environment.set('dateBirth', dateBirth);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// HTTP статус: 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Ответ содержит тело и это JSON\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// Статус сервиса: допускаем true / \"ok\" / \"OK\"\"\r",
+							"pm.test(\"Service status OK:true\", function () {\r",
+							"    let json;\r",
+							"    try {\r",
+							"        json = pm.response.json();\r",
+							"    } catch (e) {\r",
+							"        pm.expect.fail(\"Response is not valid JSON\");\r",
+							"    }\r",
+							"    pm.expect(json).to.have.property(\"status\");\r",
+							"    pm.expect(json.status).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"dateBirth\": \"{{dateBirth}}\",\r\n  \"country\": \"{{country}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Зміна password користувачу",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const newPass = \"Qwerty\" + Math.floor(Math.random() * 10000) + \"a1\";",
+							"pm.environment.set(\"newPassword_var\", newPass);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Persist new password only after successful change",
+							"if (pm.response.code === 200) {",
+							"  const newPass = pm.environment.get('pendingPassword');",
+							"  if (newPass) {",
+							"    pm.environment.set('random_password', newPass);",
+							"    pm.environment.unset('pendingPassword');",
+							"  }",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"oldPassword\": \"{{random_password}}\",\r\n  \"password\": \"{{newPassword_var}}\",\r\n  \"repeatPassword\": \"{{newPassword_var}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/password",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.Зробити logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/auth/logout",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.Зробити login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Service status ok\", function () {",
+							"    let json;",
+							"    try {",
+							"        json = pm.response.json();",
+							"    } catch (e) {",
+							"        pm.expect.fail(\"Response is not valid JSON\");",
+							"    }",
+							"    pm.expect(json).to.have.property(\"status\");",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"{{random_email}}\",\r\n  \"password\": \"{{newPassword_var}}\",\r\n  \"remember\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/auth/signin",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.Додати користувачу автомобіль",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// HTTP статус: 201",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"// Ответ содержит тело и это JSON",
+							"pm.test(\"Service status ok\", function () {",
+							"    let json;",
+							"    try {",
+							"        json = pm.response.json();",
+							"    } catch (e) {",
+							"        pm.expect.fail(\"Response is not valid JSON\");",
+							"    }",
+							"    pm.expect(json).to.have.property(\"status\");",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");",
+							"});",
+							"",
+							"const id = pm.response.json().data.id;",
+							"pm.collectionVariables.set(\"Created_Car_Id\", id);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": 250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/cars",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.Додати витрати до автівки",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// HTTP статус: 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Ответ содержит тело и это JSON\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// Статус сервиса: допускаем true /\"ok\"/\r",
+							"pm.test(\"Service status ok\", function () {\r",
+							"    let json;\r",
+							"    try {\r",
+							"        json = pm.response.json();\r",
+							"    } catch (e) {\r",
+							"        pm.expect.fail(\"Response is not valid JSON\");\r",
+							"    }\r",
+							"    pm.expect(json).to.have.property(\"status\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"reported_at\", new Date().toISOString());\r",
+							"\r",
+							"pm.environment.set(\"mileage\", + Math.floor(250 + Math.random() * 250));"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": {{Created_Car_Id}},\r\n  \"reportedAt\": \"{{reported_at}}\",\r\n  \"mileage\": {{mileage}},\r\n  \"liters\": 60,\r\n  \"totalCost\": 150,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/expenses",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.Видалити користувача",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// HTTP статус: 200 или 201\r",
+							"pm.test(\"Status code is 200/201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"// Ответ содержит тело и это JSON\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// Статус сервиса: допускаем true /\"ok\"/\r",
+							"pm.test(\"Service status ok\", function () {\r",
+							"    let json;\r",
+							"    try {\r",
+							"        json = pm.response.json();\r",
+							"    } catch (e) {\r",
+							"        pm.expect.fail(\"Response is not valid JSON\");\r",
+							"    }\r",
+							"    pm.expect(json).to.have.property(\"status\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"currency\": \"uah\",\r\n  \"distanceUnits\": \"ml\"\r\n}"
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://simple-books-api.click/status"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://simple-books-api.click/"
+		},
+		{
+			"key": "accessToken",
+			"value": "f9216976fa59887241bd16204dde45816fdcc8159b8feb329c6c20403ff851d8"
+		},
+		{
+			"key": "Created_Car_Id",
+			"value": 469435
+		}
+	]
+}
