@@ -1,0 +1,985 @@
+{
+	"info": {
+		"_postman_id": "90dfd1c5-41ae-47a1-8a73-1f0ac59235c2",
+		"name": "Hillel_Test_API_Synytskyi_with_two_iterations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47090641",
+		"_collection_link": "https://vssodd-7171426.postman.co/workspace/Vladyslav-Synytskyi's-Workspace~8010e82c-cc8f-4c1f-8c88-bfffa0ca6468/collection/47090641-90dfd1c5-41ae-47a1-8a73-1f0ac59235c2?action=share&source=collection_link&creator=47090641"
+	},
+	"item": [
+		{
+			"name": "1.Створити користувача",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"function uniqEmail() {",
+							"  const ts = Date.now();",
+							"  return `vlad_${ts}_${Math.floor(Math.random()*10000)}@gmail.com`;",
+							"}",
+							"function strongPass() {",
+							"  return `Pass${Math.floor(Math.random()*9000+1000)}A!`;",
+							"}",
+							"",
+							"const base = {",
+							"  name: \"Vlad\",",
+							"  lastName: \"Synytskyi\",",
+							"  email: uniqEmail(),",
+							"  password: strongPass()",
+							"};",
+							"",
+							"const scenarios = [",
+							"  { testName: \"Name is empty\",    patch: { name: \"\" }, expectedStatus: 400, messageRe: /name/i },",
+							"  { testName: \"Name is 1 char\",   patch: { name: \"A\" }, expectedStatus: 400, messageRe: /name/i },",
+							"  { testName: \"Name too long\",    patch: { name: \"VeryVeryLongNameThatIsInvalid\" }, expectedStatus: 400, messageRe: /name/i },",
+							"  { testName: \"Name invalid chars\", patch: { name: \"Vlad123\" }, expectedStatus: 400, messageRe: /name/i },",
+							"  { testName: \"lastName is empty\",  patch: { lastName: \"\" }, expectedStatus: 400, messageRe: /lastName/i },",
+							"  { testName: \"Email invalid format\", patch: { email: \"not-an-email\" }, expectedStatus: 400, messageRe: /email/i },",
+							"  { testName: \"Password too short\", patch: { password: \"123\" }, expectedStatus: 400, messageRe: /password/i },",
+							"  { testName: \"Happy path: valid signup\", patch: {}, expectedStatus: 201, messageRe: null }",
+							"];",
+							"",
+							"let i = pm.collectionVariables.get(\"signup_val_index\");",
+							"i = i === undefined || i === null || i === \"\" ? 0 : parseInt(i, 10);",
+							"pm.collectionVariables.set(\"signup_val_total\", scenarios.length);",
+							"",
+							"const s = scenarios[i] || scenarios[0];",
+							"",
+							"const payload = Object.assign({}, base, s.patch);",
+							"",
+							"pm.environment.set(\"name\", payload.name);",
+							"pm.environment.set(\"lastName\", payload.lastName);",
+							"pm.environment.set(\"random_email\", payload.email);",
+							"pm.environment.set(\"random_password\", payload.password);",
+							"pm.collectionVariables.set(\"expectedStatus\", s.expectedStatus);",
+							"pm.collectionVariables.set(\"currentTestName\", s.testName);",
+							"pm.collectionVariables.set(\"expectedMessageRe\", s.messageRe ? String(s.messageRe) : \"\");"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const expectedStatus = parseInt(pm.collectionVariables.get(\"expectedStatus\"), 10);",
+							"const testName = pm.collectionVariables.get(\"currentTestName\") || \"Unnamed scenario\";",
+							"const msgReStr = pm.collectionVariables.get(\"expectedMessageRe\") || \"\";",
+							"",
+							"function safeJson() {",
+							"  try { return pm.response.json(); } catch (e) { return null; }",
+							"}",
+							"const json = safeJson();",
+							"",
+							"pm.test(`Signup: status is ${expectedStatus} (${testName})`, () => {",
+							"  pm.expect(pm.response.code).to.be.oneOf(expectedStatus === 201 ? [200, 201] : [expectedStatus]);",
+							"});",
+							"",
+							"if (expectedStatus >= 400) {",
+							"  pm.test(`Signup: message matches (${testName})`, () => {",
+							"    let ok = false;",
+							"",
+							"    if (json && typeof json === \"object\" && \"message\" in json) {",
+							"      if (!msgReStr) ok = true;",
+							"      else {",
+							"        const m = msgReStr.match(/^\\/(.+)\\/([gimsuy]*)$/);",
+							"        if (m) ok = new RegExp(m[1], m[2]).test(String(json.message));",
+							"        else ok = true;",
+							"      }",
+							"    }",
+							"",
+							"    pm.expect(ok).to.eql(true);",
+							"  });",
+							"} else {",
+							"  pm.test(\"Signup: ok response contract\", () => {",
+							"    const ok = !!json && json.status === \"ok\" && json.data && typeof json.data.userId === \"number\";",
+							"    pm.expect(ok).to.eql(true);",
+							"  });",
+							"",
+							"  if (json && json.data && typeof json.data.userId === \"number\") {",
+							"    pm.environment.set(\"userId\", json.data.userId);",
+							"  }",
+							"}",
+							"",
+							"let i = pm.collectionVariables.get(\"signup_val_index\");",
+							"i = i === undefined || i === null || i === \"\" ? 0 : parseInt(i, 10);",
+							"",
+							"const total = parseInt(pm.collectionVariables.get(\"signup_val_total\") || \"0\", 10);",
+							"",
+							"if (i < total - 1) {",
+							"  pm.collectionVariables.set(\"signup_val_index\", i + 1);",
+							"  pm.execution.setNextRequest(pm.info.requestName);",
+							"} else {",
+							"  pm.collectionVariables.set(\"signup_val_index\", 0);",
+							"  pm.execution.setNextRequest(\"1.1.Валідація профілю\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"{{name}}\",\n  \"lastName\": \"{{lastName}}\",\n  \"email\": \"{{random_email}}\",\n  \"password\": \"{{random_password}}\",\n  \"repeatPassword\": \"{{random_password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/signup",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.1.Валідація профілю",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"function randStr(prefix) {",
+							"  return `${prefix}${Math.floor(Math.random()*10000)}`;",
+							"}",
+							"function randDate(startYear, endYear) {",
+							"  const start = new Date(startYear, 0, 1).getTime();",
+							"  const end = new Date(endYear, 0, 1).getTime();",
+							"  const d = new Date(start + Math.random()*(end-start));",
+							"  return d.toISOString().slice(0,10);",
+							"}",
+							"",
+							"const base = {",
+							"  name: randStr(\"Name_\"),",
+							"  lastName: randStr(\"Last_\"),",
+							"  dateBirth: randDate(1980, 2005),",
+							"  country: \"Ukraine\"",
+							"};",
+							"",
+							"const scenarios = [",
+							"  { testName: \"Profile.name empty\", patch: { name: \"\" }, expectedStatus: 400, messageRe: /name/i },",
+							"  { testName: \"Profile.lastName empty\", patch: { lastName: \"\" }, expectedStatus: 400, messageRe: /lastName/i },",
+							"  { testName: \"Profile.country invalid\", patch: { country: \"1234\" }, expectedStatus: 400, messageRe: /country/i },",
+							"  { testName: \"Profile.dateBirth invalid format\", patch: { dateBirth: \"11-06-2004\" }, expectedStatus: 400, messageRe: /dateBirth|date/i },",
+							"  { testName: \"Happy path: valid profile update\", patch: {}, expectedStatus: 200, messageRe: null }",
+							"];",
+							"",
+							"let i = pm.collectionVariables.get(\"profile_val_index\");",
+							"i = i === undefined || i === null || i === \"\" ? 0 : parseInt(i, 10);",
+							"pm.collectionVariables.set(\"profile_val_total\", scenarios.length);",
+							"",
+							"const s = scenarios[i] || scenarios[0];",
+							"const payload = Object.assign({}, base, s.patch);",
+							"",
+							"pm.environment.set(\"name\", payload.name);",
+							"pm.environment.set(\"lastName\", payload.lastName);",
+							"pm.environment.set(\"country\", payload.country);",
+							"pm.environment.set(\"dateBirth\", payload.dateBirth);",
+							"",
+							"pm.collectionVariables.set(\"expectedStatus\", s.expectedStatus);",
+							"pm.collectionVariables.set(\"currentTestName\", s.testName);",
+							"pm.collectionVariables.set(\"expectedMessageRe\", s.messageRe ? String(s.messageRe) : \"\");"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const expectedStatus = parseInt(pm.collectionVariables.get(\"expectedStatus\"), 10);",
+							"const testName = pm.collectionVariables.get(\"currentTestName\") || \"Unnamed scenario\";",
+							"const msgReStr = pm.collectionVariables.get(\"expectedMessageRe\") || \"\";",
+							"",
+							"function safeJson() {",
+							"  try { return pm.response.json(); } catch (e) { return null; }",
+							"}",
+							"const json = safeJson();",
+							"",
+							"pm.test(`Profile: status is ${expectedStatus} (${testName})`, () => {",
+							"  pm.expect(pm.response.code).to.eql(expectedStatus);",
+							"});",
+							"",
+							"if (expectedStatus >= 400) {",
+							"  pm.test(`Profile: message matches (${testName})`, () => {",
+							"    let ok = false;",
+							"",
+							"    if (json && typeof json === \"object\" && \"message\" in json) {",
+							"      if (!msgReStr) {",
+							"        ok = true;",
+							"      } else {",
+							"        const m = msgReStr.match(/^\\/(.+)\\/([gimsuy]*)$/);",
+							"        if (m) {",
+							"          const re = new RegExp(m[1], m[2]);",
+							"          ok = re.test(String(json.message));",
+							"        } else {",
+							"          ok = true;",
+							"        }",
+							"      }",
+							"    }",
+							"",
+							"    pm.expect(ok).to.eql(true);",
+							"  });",
+							"} else {",
+							"  pm.test(\"Profile: ok response contract\", () => {",
+							"    const dateOnly = json?.data?.dateBirth ? String(json.data.dateBirth).slice(0, 10) : \"\";",
+							"",
+							"    const ok =",
+							"      !!json &&",
+							"      json.status === \"ok\" &&",
+							"      json.data &&",
+							"      typeof json.data.userId === \"number\" &&",
+							"      typeof json.data.photoFilename !== \"undefined\" &&",
+							"      typeof json.data.name !== \"undefined\" &&",
+							"      typeof json.data.lastName !== \"undefined\" &&",
+							"      typeof json.data.dateBirth !== \"undefined\" &&",
+							"      typeof json.data.country !== \"undefined\" &&",
+							"      dateOnly === String(pm.environment.get(\"dateBirth\"));",
+							"",
+							"    pm.expect(ok).to.eql(true);",
+							"  });",
+							"}",
+							"",
+							"let i = pm.collectionVariables.get(\"profile_val_index\");",
+							"i = i === undefined || i === null || i === \"\" ? 0 : parseInt(i, 10);",
+							"",
+							"const total = parseInt(pm.collectionVariables.get(\"profile_val_total\") || \"0\", 10);",
+							"",
+							"if (i < total - 1) {",
+							"  pm.collectionVariables.set(\"profile_val_index\", i + 1);",
+							"  pm.execution.setNextRequest(pm.info.requestName);",
+							"} else {",
+							"  pm.collectionVariables.set(\"profile_val_index\", 0);",
+							"  pm.execution.setNextRequest(\"2.Змінити йому всі данні\");",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"dateBirth\": \"{{dateBirth}}\",\r\n  \"country\": \"{{country}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users/profile",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Змінити йому всі данні",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const firstName = pm.variables.replaceIn('{{$randomFirstName}}');",
+							"const lastName  = pm.variables.replaceIn('{{$randomLastName}}');",
+							"const country   = pm.variables.replaceIn('{{$randomCountry}}');",
+							"",
+							"function getRandomDate(start, end) {",
+							"  const d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));",
+							"  return d.toISOString().split('T')[0];",
+							"}",
+							"",
+							"const dateBirth = getRandomDate(new Date(2000, 0, 1), new Date(2005, 0, 1));",
+							"",
+							"pm.environment.set('name', firstName);",
+							"pm.environment.set('lastName', lastName);",
+							"pm.environment.set('country', country);",
+							"pm.environment.set('dateBirth', dateBirth);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is valid JSON\", () => {\r",
+							"  pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"function getRequestBody() {\r",
+							"  const raw = pm.request.body?.raw || \"{}\";\r",
+							"  return JSON.parse(pm.variables.replaceIn(raw));\r",
+							"}\r",
+							"\r",
+							"function getResponseData() {\r",
+							"  const json = pm.response.json();\r",
+							"  pm.expect(json).to.have.property(\"status\", \"ok\");\r",
+							"  pm.expect(json).to.have.property(\"data\");\r",
+							"  pm.expect(json.data).to.be.an(\"object\");\r",
+							"  return json.data;\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Profile.name matches request\", () => {\r",
+							"  const req = getRequestBody();\r",
+							"  const data = getResponseData();\r",
+							"  pm.expect(data.name).to.eql(req.name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Profile.lastName matches request\", () => {\r",
+							"  const req = getRequestBody();\r",
+							"  const data = getResponseData();\r",
+							"  pm.expect(data.lastName).to.eql(req.lastName);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Profile.country matches request\", () => {\r",
+							"  const req = getRequestBody();\r",
+							"  const data = getResponseData();\r",
+							"  pm.expect(data.country).to.eql(req.country);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Profile.dateBirth matches request (date-only)\", () => {\r",
+							"  const req = getRequestBody();\r",
+							"  const data = getResponseData();\r",
+							"\r",
+							"  const respDateOnly = String(data.dateBirth).slice(0, 10); // \"YYYY-MM-DD\"\r",
+							"  pm.expect(respDateOnly).to.eql(req.dateBirth);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Profile response includes required keys\", () => {\r",
+							"  const data = getResponseData();\r",
+							"  pm.expect(data).to.include.keys(\"userId\", \"photoFilename\", \"name\", \"lastName\", \"dateBirth\", \"country\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Profile.userId is a number\", () => {\r",
+							"  const data = getResponseData();\r",
+							"  pm.expect(data.userId).to.be.a(\"number\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"dateBirth\": \"{{dateBirth}}\",\r\n  \"country\": \"{{country}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users/profile",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Зміна password користувачу",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const newPass = \"Qwerty\" + Math.floor(Math.random() * 10000) + \"a1\";",
+							"",
+							"pm.environment.set(\"newPassword_var\", newPass);",
+							"",
+							"pm.environment.set(\"pendingPassword\", newPass);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"const createdUserId = pm.environment.get(\"userId\");",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"UserId matches the one from signup\", function () {",
+							"    pm.expect(response.data.userId).to.eql(Number(createdUserId));",
+							"});",
+							"",
+							"pm.test(\"Response status is ok\", function () {",
+							"    pm.expect(response.status).to.eql(\"ok\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"oldPassword\": \"{{random_password}}\",\r\n  \"password\": \"{{newPassword_var}}\",\r\n  \"repeatPassword\": \"{{newPassword_var}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users/password",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.Зробити logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/auth/logout",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.Зробити login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Service status ok\", function () {",
+							"    let json;",
+							"    try {",
+							"        json = pm.response.json();",
+							"    } catch (e) {",
+							"        pm.expect.fail(\"Response is not valid JSON\");",
+							"    }",
+							"    pm.expect(json).to.have.property(\"status\");",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"{{random_email}}\",\r\n  \"password\": \"{{newPassword_var}}\",\r\n  \"remember\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/auth/signin",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.Додати користувачу автомобіль",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Service status ok\", function () {",
+							"    let json;",
+							"    try {",
+							"        json = pm.response.json();",
+							"    } catch (e) {",
+							"        pm.expect.fail(\"Response is not valid JSON\");",
+							"    }",
+							"    pm.expect(json).to.have.property(\"status\");",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");",
+							"});",
+							"",
+							"const id = pm.response.json().data.id;",
+							"pm.collectionVariables.set(\"Created_Car_Id\", id);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": 250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/cars",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.Додати витрати до автівки",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Service status ok\", function () {\r",
+							"    let json;\r",
+							"    try {\r",
+							"        json = pm.response.json();\r",
+							"    } catch (e) {\r",
+							"        pm.expect.fail(\"Response is not valid JSON\");\r",
+							"    }\r",
+							"    pm.expect(json).to.have.property(\"status\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"reported_at\", new Date().toISOString());\r",
+							"\r",
+							"pm.environment.set(\"mileage\", + Math.floor(250 + Math.random() * 250));"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": {{Created_Car_Id}},\r\n  \"reportedAt\": \"{{reported_at}}\",\r\n  \"mileage\": {{mileage}},\r\n  \"liters\": 60,\r\n  \"totalCost\": 150,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/expenses",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.Додати витрати до автівки (New mileage)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Service status ok\", function () {\r",
+							"    let json;\r",
+							"    try {\r",
+							"        json = pm.response.json();\r",
+							"    } catch (e) {\r",
+							"        pm.expect.fail(\"Response is not valid JSON\");\r",
+							"    }\r",
+							"    pm.expect(json).to.have.property(\"status\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let currentMileage = pm.environment.get(\"mileage\");",
+							"",
+							"currentMileage = parseInt(currentMileage) || 0;",
+							"",
+							"let newMileage = currentMileage + 150;",
+							"",
+							"pm.collectionVariables.set(\"previousMileage\", currentMileage);",
+							"",
+							"pm.environment.set(\"mileage\", newMileage);"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": {{Created_Car_Id}},\r\n  \"reportedAt\": \"{{reported_at}}\",\r\n  \"mileage\": {{mileage}},\r\n  \"liters\": 60,\r\n  \"totalCost\": 150,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/expenses",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.Видалити користувача",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200/201\", function () {",
+							"  pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							"",
+							"pm.test(\"Response is JSON\", function () {",
+							"  pm.response.to.be.withBody;",
+							"  pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Service status ok\", function () {",
+							"  let json;",
+							"  try { json = pm.response.json(); } catch (e) { pm.expect.fail(\"Response is not valid JSON\"); }",
+							"  pm.expect(json).to.have.property(\"status\");",
+							"  pm.expect(pm.response.text()).to.include(\"ok\");",
+							"});",
+							"",
+							"(function () {",
+							"  const hasRunnerIters = (typeof pm.info.iterationCount === \"number\") && pm.info.iterationCount > 1;",
+							"",
+							"  if (hasRunnerIters) {",
+							"    pm.collectionVariables.set(\"env_cycle\", 0);",
+							"    pm.collectionVariables.set(\"signup_val_index\", 0);",
+							"    pm.collectionVariables.set(\"profile_val_index\", 0);",
+							"",
+							"    pm.execution.setNextRequest(null);",
+							"    return;",
+							"  }",
+							"",
+							"  let cycle = pm.collectionVariables.get(\"env_cycle\");",
+							"  cycle = cycle === undefined || cycle === null || cycle === \"\" ? 0 : parseInt(cycle, 10);",
+							"",
+							"  if (cycle === 0) {",
+							"    pm.collectionVariables.set(\"env_cycle\", 1);",
+							"    pm.collectionVariables.set(\"signup_val_index\", 0);",
+							"    pm.collectionVariables.set(\"profile_val_index\", 0);",
+							"",
+							"    pm.environment.unset(\"random_email\");",
+							"    pm.environment.unset(\"random_password\");",
+							"    pm.environment.unset(\"userId\");",
+							"    pm.collectionVariables.unset(\"Created_Car_Id\");",
+							"  }",
+							"})();"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"currency\": \"uah\",\r\n  \"distanceUnits\": \"ml\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users/",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"if (!pm.iterationData.has(\"base_url\")) { throw new Error(\"base_url missing\"); }",
+					"pm.environment.set(\"BaseURL\", pm.iterationData.get(\"base_url\"));"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "accessToken",
+			"value": "f9216976fa59887241bd16204dde45816fdcc8159b8feb329c6c20403ff851d8"
+		},
+		{
+			"key": "Created_Car_Id",
+			"value": 469435
+		},
+		{
+			"key": "newMileage",
+			"value": ""
+		},
+		{
+			"key": "mileage",
+			"value": ""
+		},
+		{
+			"key": "previousMileage",
+			"value": ""
+		},
+		{
+			"key": "val_index",
+			"value": ""
+		},
+		{
+			"key": "val_total",
+			"value": ""
+		},
+		{
+			"key": "expectedStatus",
+			"value": ""
+		},
+		{
+			"key": "currentTestName",
+			"value": ""
+		},
+		{
+			"key": "current_env_key",
+			"value": ""
+		},
+		{
+			"key": "signup_val_total",
+			"value": ""
+		},
+		{
+			"key": "expectedMessageRe",
+			"value": ""
+		},
+		{
+			"key": "signup_val_index",
+			"value": ""
+		},
+		{
+			"key": "profile_val_total",
+			"value": ""
+		},
+		{
+			"key": "profile_val_index",
+			"value": ""
+		},
+		{
+			"key": "env_cycle",
+			"value": ""
+		}
+	]
+}
