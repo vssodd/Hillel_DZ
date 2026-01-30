@@ -1,0 +1,501 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1769784773044,1541,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-41,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1451,0,2
+1769784772932,1076,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-30,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1060,0,1
+1769784773113,1705,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-48,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1637,0,2
+1769784772880,994,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-24,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,981,0,4
+1769784772832,879,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-13,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,860,0,41
+1769784773276,1972,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-64,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1956,0,5
+1769784773313,2632,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-68,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2104,0,2
+1769784772923,1058,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-29,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1043,0,2
+1769784773006,1311,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-37,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1275,0,6
+1769784773184,1787,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-55,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1758,0,2
+1769784773035,1425,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-40,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1395,0,3
+1769784773105,1635,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-47,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1621,0,2
+1769784772831,943,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-10,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,914,0,41
+1769784773235,1883,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-60,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1869,0,3
+1769784772830,532,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-4,text,true,,947166,158,73,73,http://127.0.0.1:3001/characters,506,0,40
+1769784773125,1689,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-49,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1643,0,5
+1769784773208,1833,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-57,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1800,0,5
+1769784772830,272,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-8,text,true,,947166,158,47,47,http://127.0.0.1:3001/characters,253,0,40
+1769784772944,1098,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-31,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1076,0,1
+1769784773257,1925,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-62,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1907,0,3
+1769784773376,3209,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-74,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,3169,0,3
+1769784773297,2046,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-66,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2031,0,4
+1769784773167,1736,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-53,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1723,0,4
+1769784772853,719,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-22,text,true,,947166,158,93,93,http://127.0.0.1:3001/characters,672,0,20
+1769784772972,1208,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-34,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1172,0,3
+1769784772832,904,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-14,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,889,0,41
+1769784773148,1702,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-51,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1687,0,2
+1769784772864,946,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-23,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,933,0,9
+1769784772830,399,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-5,text,true,,947166,158,59,59,http://127.0.0.1:3001/characters,366,0,40
+1769784773217,1846,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-58,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1830,0,5
+1769784772832,1001,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-16,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,989,0,41
+1769784772832,241,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-17,text,true,,947166,158,44,44,http://127.0.0.1:3001/characters,218,0,40
+1769784772833,679,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-19,text,true,,947166,158,87,87,http://127.0.0.1:3001/characters,655,0,40
+1769784773074,1574,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-44,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1555,0,1
+1769784772831,961,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-7,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,936,0,41
+1769784772831,466,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-3,text,true,,947166,158,66,66,http://127.0.0.1:3001/characters,412,0,40
+1769784773095,1616,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-46,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1597,0,3
+1769784773138,1688,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-50,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1665,0,3
+1769784772832,646,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-12,text,true,,947166,158,84,84,http://127.0.0.1:3001/characters,617,0,41
+1769784773018,1397,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-38,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1320,0,3
+1769784772831,315,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-9,text,true,,947166,158,51,51,http://127.0.0.1:3001/characters,286,0,39
+1769784772832,211,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-11,text,true,,947166,158,41,41,http://127.0.0.1:3001/characters,156,0,40
+1769784772831,565,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-1,text,true,,947166,158,76,76,http://127.0.0.1:3001/characters,543,0,39
+1769784772951,1205,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-32,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1112,0,2
+1769784773065,1550,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-43,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1529,0,4
+1769784773288,1998,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-65,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1973,0,3
+1769784772914,1046,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-28,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1019,0,2
+1769784772963,1170,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-33,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1130,0,1
+1769784772830,604,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-2,text,true,,947166,158,80,80,http://127.0.0.1:3001/characters,583,0,40
+1769784773056,1545,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-42,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1503,0,3
+1769784772843,335,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-21,text,true,,947166,158,54,54,http://127.0.0.1:3001/characters,316,0,30
+1769784773335,2897,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-70,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2610,0,2
+1769784773083,1594,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-45,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1577,0,3
+1769784772833,811,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-18,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,792,0,40
+1769784773246,1902,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-61,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1883,0,4
+1769784772910,1034,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-27,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,998,0,2
+1769784773265,1954,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-63,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1932,0,4
+1769784773365,3212,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-73,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,3090,0,2
+1769784773027,1392,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-39,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1347,0,3
+1769784772983,1241,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-35,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1203,0,1
+1769784772833,210,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-15,text,true,,947166,158,41,41,http://127.0.0.1:3001/characters,187,0,39
+1769784773195,1799,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-56,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1785,0,2
+1769784773356,3097,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-72,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2689,0,4
+1769784773154,1726,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-52,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1710,0,2
+1769784772885,981,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-25,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,957,0,3
+1769784776699,53,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-14,text,false,,273,162,100,100,http://127.0.0.1:3001/character/8017,53,0,0
+1769784776697,54,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-57,text,false,,273,162,100,100,http://127.0.0.1:3001/character/3793,54,0,0
+1769784773175,1755,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-54,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1741,0,2
+1769784772831,843,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-6,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,827,0,40
+1769784772895,1003,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-26,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,989,0,2
+1769784773226,1864,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-59,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1849,0,4
+1769784773306,2111,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-67,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2054,0,2
+1769784773346,3080,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-71,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2597,0,3
+1769784772995,1281,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-36,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,1248,0,3
+1769784773323,3133,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-69,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,2266,0,3
+1769784776699,70,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-51,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12930,70,0,0
+1769784772832,780,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-20,text,true,,947166,158,98,98,http://127.0.0.1:3001/characters,751,0,41
+1769784776695,81,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-41,text,false,,273,162,100,100,http://127.0.0.1:3001/character/3244,81,0,0
+1769784776695,84,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-53,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12505,84,0,0
+1769784773388,3401,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-75,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,3285,0,4
+1769784776757,88,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-14,text,true,,286,225,100,100,http://127.0.0.1:3001/character,88,0,0
+1769784776757,88,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-57,text,true,,286,225,100,100,http://127.0.0.1:3001/character,88,0,0
+1769784776769,76,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-51,text,true,,286,225,100,100,http://127.0.0.1:3001/character,76,0,0
+1769784776777,70,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-41,text,true,,286,225,100,100,http://127.0.0.1:3001/character,70,0,0
+1769784776781,65,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-53,text,true,,286,225,100,100,http://127.0.0.1:3001/character,65,0,0
+1769784776699,163,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-30,text,true,,280,163,100,100,http://127.0.0.1:3001/character/10672,162,0,0
+1769784776700,175,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-4,text,true,,281,163,100,100,http://127.0.0.1:3001/character/17812,175,0,0
+1769784776702,173,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-58,text,false,,273,162,100,100,http://127.0.0.1:3001/character/3042,173,0,0
+1769784776697,188,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-49,text,true,,280,162,100,100,http://127.0.0.1:3001/character/6490,188,0,0
+1769784776702,183,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-40,text,false,,273,161,100,100,http://127.0.0.1:3001/character/306,183,0,0
+1769784776699,191,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-34,text,true,,280,162,100,100,http://127.0.0.1:3001/character/3847,191,0,0
+1769784776700,190,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-60,text,false,,273,162,100,100,http://127.0.0.1:3001/character/4125,190,0,0
+1769784776697,195,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-22,text,true,,281,163,100,100,http://127.0.0.1:3001/character/10345,195,0,0
+1769784776701,201,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-10,text,false,,273,163,100,100,http://127.0.0.1:3001/character/15671,201,0,0
+1769784773405,3486,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-77,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,3405,0,2
+1769784776701,208,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-5,text,true,,281,163,100,100,http://127.0.0.1:3001/character/15034,208,0,0
+1769784776705,210,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-68,text,false,,273,162,100,100,http://127.0.0.1:3001/character/1036,210,0,0
+1769784776707,214,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-24,text,true,,281,163,100,100,http://127.0.0.1:3001/character/11851,214,0,0
+1769784776707,217,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-64,text,true,,280,162,100,100,http://127.0.0.1:3001/character/9216,217,0,0
+1769784776700,227,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-23,text,true,,281,163,100,100,http://127.0.0.1:3001/character/18427,227,0,0
+1769784776707,230,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-16,text,false,,273,162,100,100,http://127.0.0.1:3001/character/7883,230,0,0
+1769784776705,238,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-29,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12783,238,0,0
+1769784776702,249,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-55,text,false,,273,162,100,100,http://127.0.0.1:3001/character/1435,248,0,0
+1769784776702,253,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-47,text,true,,280,162,100,100,http://127.0.0.1:3001/character/6484,252,0,0
+1769784776702,257,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-37,text,true,,281,163,100,100,http://127.0.0.1:3001/character/15384,257,0,0
+1769784776710,255,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-17,text,true,,281,163,100,100,http://127.0.0.1:3001/character/19760,255,0,0
+1769784776710,261,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-74,text,false,,273,162,100,100,http://127.0.0.1:3001/character/8588,261,0,0
+1769784776710,269,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-8,text,false,,273,161,100,100,http://127.0.0.1:3001/character/987,269,0,0
+1769784776710,273,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-48,text,true,,281,163,100,100,http://127.0.0.1:3001/character/10792,273,0,0
+1769784776710,278,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-66,text,false,,273,163,100,100,http://127.0.0.1:3001/character/12167,278,0,0
+1769784776710,282,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-62,text,false,,273,162,100,100,http://127.0.0.1:3001/character/7836,282,0,0
+1769784776711,291,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-13,text,true,,280,162,100,100,http://127.0.0.1:3001/character/5601,290,0,0
+1769784776712,295,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-31,text,false,,273,163,100,100,http://127.0.0.1:3001/character/12623,295,0,0
+1769784776715,295,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-19,text,true,,280,162,100,100,http://127.0.0.1:3001/character/7703,295,0,0
+1769784776720,294,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-44,text,true,,281,163,100,100,http://127.0.0.1:3001/character/18656,294,0,0
+1769784776722,307,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-46,text,true,,281,163,100,100,http://127.0.0.1:3001/character/18987,307,0,0
+1769784776723,331,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-50,text,true,,279,162,100,100,http://127.0.0.1:3001/character/4516,331,0,0
+1769784776720,334,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-7,text,true,,280,162,100,100,http://127.0.0.1:3001/character/6084,334,0,0
+1769784776724,330,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-38,text,false,,273,161,100,100,http://127.0.0.1:3001/character/841,330,0,0
+1769784776722,332,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-3,text,true,,281,163,100,100,http://127.0.0.1:3001/character/11747,332,0,0
+1769784776726,328,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-9,text,true,,279,162,100,100,http://127.0.0.1:3001/character/5416,328,0,0
+1769784776726,336,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-11,text,false,,273,162,100,100,http://127.0.0.1:3001/character/4411,336,0,0
+1769784776731,334,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-43,text,true,,281,163,100,100,http://127.0.0.1:3001/character/18156,334,0,0
+1769784773396,3658,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-76,text,true,,947166,158,100,100,http://127.0.0.1:3001/characters,3355,0,3
+1769784776726,343,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-12,text,false,,273,162,100,100,http://127.0.0.1:3001/character/9583,343,0,0
+1769784776731,341,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-1,text,false,,273,162,100,100,http://127.0.0.1:3001/character/2718,341,0,0
+1769784776733,342,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-65,text,true,,281,163,100,100,http://127.0.0.1:3001/character/16236,341,0,0
+1769784776740,337,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-63,text,true,,280,162,100,100,http://127.0.0.1:3001/character/7011,337,0,0
+1769784776736,343,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-70,text,false,,273,162,100,100,http://127.0.0.1:3001/character/6450,343,0,0
+1769784776736,345,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-45,text,true,,280,162,100,100,http://127.0.0.1:3001/character/9508,345,0,0
+1769784776741,342,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-39,text,true,,279,162,100,100,http://127.0.0.1:3001/character/8043,342,0,0
+1769784776743,343,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-35,text,false,,273,163,100,100,http://127.0.0.1:3001/character/10977,343,0,0
+1769784776734,355,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-42,text,false,,273,162,100,100,http://127.0.0.1:3001/character/4211,355,0,0
+1769784776733,358,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-33,text,true,,281,163,100,100,http://127.0.0.1:3001/character/17340,358,0,0
+1769784776736,357,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-21,text,false,,273,161,100,100,http://127.0.0.1:3001/character/689,357,0,0
+1769784776738,357,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-61,text,false,,273,162,100,100,http://127.0.0.1:3001/character/1010,357,0,0
+1769784776736,360,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-18,text,false,,273,162,100,100,http://127.0.0.1:3001/character/3674,360,0,0
+1769784776733,365,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-2,text,false,,273,163,100,100,http://127.0.0.1:3001/character/15579,365,0,0
+1769784776743,357,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-15,text,true,,281,163,100,100,http://127.0.0.1:3001/character/13309,357,0,0
+1769784776730,372,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-32,text,false,,273,162,100,100,http://127.0.0.1:3001/character/3501,372,0,0
+1769784776738,366,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-27,text,true,,281,163,100,100,http://127.0.0.1:3001/character/11660,366,0,0
+1769784776733,373,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-28,text,false,,273,163,100,100,http://127.0.0.1:3001/character/10688,373,0,0
+1769784776744,364,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-72,text,true,,280,162,100,100,http://127.0.0.1:3001/character/7850,364,0,0
+1769784776744,366,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-56,text,false,,273,163,100,100,http://127.0.0.1:3001/character/11869,366,0,0
+1769784776749,363,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-52,text,false,,273,162,100,100,http://127.0.0.1:3001/character/5535,363,0,0
+1769784776757,356,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-25,text,true,,280,162,100,100,http://127.0.0.1:3001/character/5395,356,0,0
+1769784776741,374,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-73,text,true,,281,163,100,100,http://127.0.0.1:3001/character/19516,374,0,0
+1769784776762,355,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-54,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12587,355,0,0
+1769784776762,360,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-26,text,false,,273,162,100,100,http://127.0.0.1:3001/character/6182,360,0,0
+1769784776761,363,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-6,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12377,363,0,0
+1769784776765,361,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-59,text,true,,280,162,100,100,http://127.0.0.1:3001/character/9911,361,0,0
+1769784776768,361,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-71,text,false,,273,163,100,100,http://127.0.0.1:3001/character/10028,361,0,0
+1769784776769,363,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-36,text,false,,273,162,100,100,http://127.0.0.1:3001/character/5175,363,0,0
+1769784776772,362,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-20,text,true,,281,163,100,100,http://127.0.0.1:3001/character/18733,362,0,0
+1769784776768,368,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-67,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12271,368,0,0
+1769784776770,369,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-69,text,true,,281,163,100,100,http://127.0.0.1:3001/character/12105,369,0,0
+1769784776806,354,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-75,text,true,,281,163,100,100,http://127.0.0.1:3001/character/17360,354,0,0
+1769784776848,319,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-57,text,false,,273,232,100,100,http://127.0.0.1:3001/character/3793,319,0,0
+1769784776849,322,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-14,text,false,,273,232,100,100,http://127.0.0.1:3001/character/8017,322,0,0
+1769784776848,326,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-51,text,true,,283,232,100,100,http://127.0.0.1:3001/character/12930,326,0,0
+1769784776854,325,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-41,text,false,,273,232,100,100,http://127.0.0.1:3001/character/3244,325,0,0
+1769784776856,326,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-53,text,true,,284,233,100,100,http://127.0.0.1:3001/character/12505,326,0,0
+1769784776908,276,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-77,text,true,,281,163,100,100,http://127.0.0.1:3001/character/15236,276,0,0
+1769784776867,320,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-30,text,true,,286,225,100,100,http://127.0.0.1:3001/character,320,0,0
+1769784776877,312,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-4,text,true,,285,224,100,100,http://127.0.0.1:3001/character,312,0,0
+1769784776877,320,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-58,text,true,,286,225,100,100,http://127.0.0.1:3001/character,319,0,0
+1769784776886,313,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-49,text,true,,286,225,100,100,http://127.0.0.1:3001/character,313,0,0
+1769784776887,313,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-40,text,true,,286,225,100,100,http://127.0.0.1:3001/character,313,0,0
+1769784776892,310,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-60,text,true,,286,225,100,100,http://127.0.0.1:3001/character,310,0,0
+1769784776892,315,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-22,text,true,,286,225,100,100,http://127.0.0.1:3001/character,315,0,0
+1769784776893,317,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-34,text,true,,285,224,100,100,http://127.0.0.1:3001/character,317,0,0
+1769784776904,308,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-10,text,true,,285,224,100,100,http://127.0.0.1:3001/character,308,0,0
+1769784776910,304,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-5,text,true,,286,225,100,100,http://127.0.0.1:3001/character,304,0,0
+1769784776917,299,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-68,text,true,,286,225,100,100,http://127.0.0.1:3001/character,298,0,0
+1769784776923,294,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-24,text,true,,286,225,100,100,http://127.0.0.1:3001/character,294,0,0
+1769784776927,292,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-64,text,true,,286,225,100,100,http://127.0.0.1:3001/character,291,0,0
+1769784776930,290,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-23,text,true,,286,225,100,100,http://127.0.0.1:3001/character,290,0,0
+1769784776939,283,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-16,text,true,,286,225,100,100,http://127.0.0.1:3001/character,283,0,0
+1769784776946,277,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-29,text,true,,286,225,100,100,http://127.0.0.1:3001/character,277,0,0
+1769784776952,273,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-55,text,true,,286,225,100,100,http://127.0.0.1:3001/character,273,0,0
+1769784776956,271,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-47,text,true,,286,225,100,100,http://127.0.0.1:3001/character,271,0,0
+1769784776961,268,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-37,text,true,,286,225,100,100,http://127.0.0.1:3001/character,268,0,0
+1769784776967,263,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-17,text,true,,286,225,100,100,http://127.0.0.1:3001/character,263,0,0
+1769784776972,261,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-74,text,true,,285,224,100,100,http://127.0.0.1:3001/character,261,0,0
+1769784776980,255,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-8,text,true,,286,225,100,100,http://127.0.0.1:3001/character,255,0,0
+1769784776985,252,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-48,text,true,,286,225,100,100,http://127.0.0.1:3001/character,252,0,0
+1769784776991,247,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-66,text,true,,286,225,100,100,http://127.0.0.1:3001/character,247,0,0
+1769784776994,246,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-62,text,true,,286,225,100,100,http://127.0.0.1:3001/character,246,0,0
+1769784777005,237,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-13,text,true,,286,225,100,100,http://127.0.0.1:3001/character,237,0,0
+1769784777009,235,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-31,text,true,,286,225,100,100,http://127.0.0.1:3001/character,235,0,0
+1769784777011,234,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-19,text,true,,286,225,100,100,http://127.0.0.1:3001/character,234,0,0
+1769784777016,231,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-44,text,true,,286,225,100,100,http://127.0.0.1:3001/character,231,0,0
+1769784777067,185,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-76,text,false,,273,162,100,100,http://127.0.0.1:3001/character/9441,185,0,0
+1769784777031,224,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-46,text,true,,286,225,100,100,http://127.0.0.1:3001/character,224,0,0
+1769784777055,202,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-3,text,true,,286,225,100,100,http://127.0.0.1:3001/character,202,0,0
+1769784777055,205,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-50,text,true,,286,225,100,100,http://127.0.0.1:3001/character,205,0,0
+1769784777055,211,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-7,text,true,,286,225,100,100,http://127.0.0.1:3001/character,211,0,0
+1769784777055,212,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-9,text,true,,286,225,100,100,http://127.0.0.1:3001/character,212,0,0
+1769784777056,212,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-38,text,true,,285,224,100,100,http://127.0.0.1:3001/character,212,0,0
+1769784777063,206,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-11,text,true,,286,225,100,100,http://127.0.0.1:3001/character,206,0,0
+1769784777067,204,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-43,text,true,,286,225,100,100,http://127.0.0.1:3001/character,204,0,0
+1769784777070,203,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-12,text,true,,286,225,100,100,http://127.0.0.1:3001/character,203,0,0
+1769784777073,201,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-1,text,true,,286,225,100,100,http://127.0.0.1:3001/character,201,0,0
+1769784777076,199,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-65,text,true,,286,225,100,100,http://127.0.0.1:3001/character,199,0,0
+1769784777078,199,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-63,text,true,,286,225,100,100,http://127.0.0.1:3001/character,199,0,0
+1769784777081,197,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-70,text,true,,285,224,100,100,http://127.0.0.1:3001/character,197,0,0
+1769784777082,197,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-45,text,true,,285,224,100,100,http://127.0.0.1:3001/character,197,0,0
+1769784777084,196,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-39,text,true,,286,225,100,100,http://127.0.0.1:3001/character,196,0,0
+1769784777088,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-35,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777090,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-42,text,true,,285,224,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777092,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-33,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777094,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-21,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777095,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-61,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777097,193,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-18,text,true,,286,225,100,100,http://127.0.0.1:3001/character,193,0,0
+1769784777098,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-2,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777101,192,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-15,text,true,,286,225,100,100,http://127.0.0.1:3001/character,192,0,0
+1769784777103,192,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-32,text,true,,286,225,100,100,http://127.0.0.1:3001/character,192,0,0
+1769784777105,191,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-27,text,true,,286,225,100,100,http://127.0.0.1:3001/character,191,0,0
+1769784777107,195,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-28,text,true,,286,225,100,100,http://127.0.0.1:3001/character,195,0,0
+1769784777109,194,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-72,text,true,,286,225,100,100,http://127.0.0.1:3001/character,194,0,0
+1769784777111,193,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-56,text,true,,286,225,100,100,http://127.0.0.1:3001/character,193,0,0
+1769784777113,192,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-52,text,true,,286,225,100,100,http://127.0.0.1:3001/character,192,0,0
+1769784777113,193,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-25,text,true,,286,225,100,100,http://127.0.0.1:3001/character,193,0,0
+1769784777116,191,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-73,text,true,,286,225,100,100,http://127.0.0.1:3001/character,191,0,0
+1769784777118,190,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-54,text,true,,286,225,100,100,http://127.0.0.1:3001/character,190,0,0
+1769784777123,186,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-26,text,true,,286,225,100,100,http://127.0.0.1:3001/character,186,0,0
+1769784777125,185,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-6,text,true,,286,225,100,100,http://127.0.0.1:3001/character,185,0,0
+1769784777127,184,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-59,text,true,,286,225,100,100,http://127.0.0.1:3001/character,184,0,0
+1769784777130,182,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-71,text,true,,286,225,100,100,http://127.0.0.1:3001/character,182,0,0
+1769784777133,179,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-36,text,true,,286,225,100,100,http://127.0.0.1:3001/character,179,0,0
+1769784777135,178,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-20,text,true,,286,225,100,100,http://127.0.0.1:3001/character,178,0,0
+1769784777137,177,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-67,text,true,,286,225,100,100,http://127.0.0.1:3001/character,177,0,0
+1769784777140,175,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-69,text,true,,286,225,100,100,http://127.0.0.1:3001/character,175,0,0
+1769784773415,3907,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-78,text,true,,947401,158,100,100,http://127.0.0.1:3001/characters,3740,0,3
+1769784777161,176,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-75,text,true,,286,225,100,100,http://127.0.0.1:3001/character,176,0,0
+1769784777168,171,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-57,text,false,,273,184,100,100,http://127.0.0.1:3001/character/3793,171,0,0
+1769784777172,168,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-14,text,false,,273,184,100,100,http://127.0.0.1:3001/character/8017,168,0,0
+1769784777175,167,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-51,text,true,,293,185,98,98,http://127.0.0.1:3001/character/12930,167,0,0
+1769784777180,164,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-41,text,false,,273,184,97,97,http://127.0.0.1:3001/character/3244,164,0,0
+1769784777183,162,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-53,text,true,,293,185,96,96,http://127.0.0.1:3001/character/12505,162,0,0
+1769784777185,161,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-77,text,true,,286,225,96,96,http://127.0.0.1:3001/character,161,0,0
+1769784777188,160,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-30,text,true,,284,233,95,95,http://127.0.0.1:3001/character/10672,160,0,0
+1769784777190,160,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-4,text,true,,284,233,95,95,http://127.0.0.1:3001/character/17812,160,0,0
+1769784777197,156,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-58,text,false,,273,232,95,95,http://127.0.0.1:3001/character/3042,156,0,0
+1769784777200,154,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-49,text,true,,283,232,95,95,http://127.0.0.1:3001/character/6490,154,0,0
+1769784777201,155,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-40,text,false,,273,231,95,95,http://127.0.0.1:3001/character/306,155,0,0
+1769784777203,155,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-60,text,false,,273,232,95,95,http://127.0.0.1:3001/character/4125,155,0,0
+1769784777208,151,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-22,text,true,,284,233,95,95,http://127.0.0.1:3001/character/10345,151,0,0
+1769784777211,149,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-34,text,true,,283,232,95,95,http://127.0.0.1:3001/character/3847,149,0,0
+1769784777214,148,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-10,text,false,,273,233,95,95,http://127.0.0.1:3001/character/15671,148,0,0
+1769784777215,149,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-5,text,true,,283,232,95,95,http://127.0.0.1:3001/character/15034,149,0,0
+1769784777216,151,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-68,text,false,,273,232,95,95,http://127.0.0.1:3001/character/1036,151,0,0
+1769784777217,151,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-24,text,true,,283,232,95,95,http://127.0.0.1:3001/character/11851,151,0,0
+1769784777220,149,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-64,text,true,,282,231,95,95,http://127.0.0.1:3001/character/9216,149,0,0
+1769784777221,150,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-23,text,true,,284,233,95,95,http://127.0.0.1:3001/character/18427,150,0,0
+1769784777222,152,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-16,text,false,,273,232,95,95,http://127.0.0.1:3001/character/7883,152,0,0
+1769784777224,152,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-29,text,true,,284,233,95,95,http://127.0.0.1:3001/character/12783,152,0,0
+1769784777226,152,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-55,text,false,,273,232,95,95,http://127.0.0.1:3001/character/1435,152,0,0
+1769784777228,152,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-47,text,true,,283,232,95,95,http://127.0.0.1:3001/character/6484,152,0,0
+1769784777230,152,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-37,text,true,,284,233,95,95,http://127.0.0.1:3001/character/15384,152,0,0
+1769784777231,153,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-17,text,true,,284,233,95,95,http://127.0.0.1:3001/character/19760,153,0,0
+1769784777234,153,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-74,text,false,,273,232,95,95,http://127.0.0.1:3001/character/8588,153,0,0
+1769784777236,153,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-8,text,false,,273,231,95,95,http://127.0.0.1:3001/character/987,153,0,0
+1769784777238,153,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-48,text,true,,284,233,95,95,http://127.0.0.1:3001/character/10792,153,0,0
+1769784777239,155,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-66,text,false,,273,233,95,95,http://127.0.0.1:3001/character/12167,155,0,0
+1769784777241,155,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-62,text,false,,273,232,95,95,http://127.0.0.1:3001/character/7836,155,0,0
+1769784777242,155,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-13,text,true,,282,231,95,95,http://127.0.0.1:3001/character/5601,155,0,0
+1769784777245,155,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-31,text,false,,273,233,95,95,http://127.0.0.1:3001/character/12623,155,0,0
+1769784777246,155,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-19,text,true,,283,232,95,95,http://127.0.0.1:3001/character/7703,155,0,0
+1769784777249,154,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-44,text,true,,284,233,95,95,http://127.0.0.1:3001/character/18656,154,0,0
+1769784777254,150,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-76,text,true,,286,225,95,95,http://127.0.0.1:3001/character,150,0,0
+1769784777256,150,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-46,text,true,,284,233,95,95,http://127.0.0.1:3001/character/18987,149,0,0
+1769784777259,148,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-3,text,true,,284,233,95,95,http://127.0.0.1:3001/character/11747,148,0,0
+1769784777261,147,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-50,text,true,,283,232,95,95,http://127.0.0.1:3001/character/4516,147,0,0
+1769784777266,145,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-7,text,true,,283,232,95,95,http://127.0.0.1:3001/character/6084,145,0,0
+1769784777268,145,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-9,text,true,,283,232,95,95,http://127.0.0.1:3001/character/5416,144,0,0
+1769784777269,146,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-38,text,false,,273,231,95,95,http://127.0.0.1:3001/character/841,146,0,0
+1769784777269,148,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-11,text,false,,273,232,95,95,http://127.0.0.1:3001/character/4411,148,0,0
+1769784777272,148,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-43,text,true,,284,233,95,95,http://127.0.0.1:3001/character/18156,148,0,0
+1769784777273,149,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-12,text,false,,273,232,95,95,http://127.0.0.1:3001/character/9583,149,0,0
+1769784777275,150,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-1,text,false,,273,231,95,95,http://127.0.0.1:3001/character/2718,150,0,0
+1769784777276,151,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-65,text,true,,284,233,95,95,http://127.0.0.1:3001/character/16236,151,0,0
+1769784777278,151,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-63,text,true,,283,232,95,95,http://127.0.0.1:3001/character/7011,151,0,0
+1769784777279,152,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-70,text,false,,273,232,95,95,http://127.0.0.1:3001/character/6450,152,0,0
+1769784777280,152,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-45,text,true,,283,232,95,95,http://127.0.0.1:3001/character/9508,152,0,0
+1769784777281,153,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-39,text,true,,283,232,95,95,http://127.0.0.1:3001/character/8043,153,0,0
+1769784777283,153,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-35,text,false,,273,233,95,95,http://127.0.0.1:3001/character/10977,153,0,0
+1769784777285,154,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-42,text,false,,273,232,95,95,http://127.0.0.1:3001/character/4211,154,0,0
+1769784777286,156,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-33,text,true,,284,233,95,95,http://127.0.0.1:3001/character/17340,156,0,0
+1769784777288,157,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-21,text,false,,273,230,95,95,http://127.0.0.1:3001/character/689,157,0,0
+1769784777290,158,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-61,text,false,,273,232,95,95,http://127.0.0.1:3001/character/1010,158,0,0
+1769784777291,160,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-18,text,false,,273,232,95,95,http://127.0.0.1:3001/character/3674,160,0,0
+1769784777293,160,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-2,text,false,,273,233,95,95,http://127.0.0.1:3001/character/15579,160,0,0
+1769784777294,161,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-15,text,true,,284,233,95,95,http://127.0.0.1:3001/character/13309,161,0,0
+1769784777296,162,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-32,text,false,,273,232,95,95,http://127.0.0.1:3001/character/3501,162,0,0
+1769784777297,162,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-27,text,true,,283,232,95,95,http://127.0.0.1:3001/character/11660,162,0,0
+1769784777303,159,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-28,text,false,,273,233,95,95,http://127.0.0.1:3001/character/10688,159,0,0
+1769784777303,160,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-72,text,true,,282,231,95,95,http://127.0.0.1:3001/character/7850,160,0,0
+1769784777305,160,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-56,text,false,,273,233,95,95,http://127.0.0.1:3001/character/11869,160,0,0
+1769784777306,162,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-52,text,false,,273,232,95,95,http://127.0.0.1:3001/character/5535,162,0,0
+1769784777306,162,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-25,text,true,,283,232,95,95,http://127.0.0.1:3001/character/5395,162,0,0
+1769784777308,163,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-73,text,true,,284,233,95,95,http://127.0.0.1:3001/character/19516,163,0,0
+1769784777309,164,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-54,text,true,,284,233,95,95,http://127.0.0.1:3001/character/12587,164,0,0
+1769784777309,168,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-26,text,false,,273,232,95,95,http://127.0.0.1:3001/character/6182,168,0,0
+1769784777310,169,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-6,text,true,,284,233,95,95,http://127.0.0.1:3001/character/12377,169,0,0
+1769784777311,170,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-59,text,true,,283,232,95,95,http://127.0.0.1:3001/character/9911,170,0,0
+1769784777312,171,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-71,text,false,,273,233,95,95,http://127.0.0.1:3001/character/10028,171,0,0
+1769784777313,173,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-36,text,false,,273,232,95,95,http://127.0.0.1:3001/character/5175,172,0,0
+1769784777314,174,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-20,text,true,,284,233,95,95,http://127.0.0.1:3001/character/18733,174,0,0
+1769784777314,176,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-67,text,true,,284,233,95,95,http://127.0.0.1:3001/character/12271,175,0,0
+1769784777317,175,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-69,text,true,,284,233,95,95,http://127.0.0.1:3001/character/12105,175,0,0
+1769784777328,165,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-78,text,true,,281,163,95,95,http://127.0.0.1:3001/character/18841,165,0,0
+1769784773426,4074,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-79,text,true,,950641,158,95,95,http://127.0.0.1:3001/characters,3908,0,2
+1769784777338,179,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-75,text,true,,284,233,95,95,http://127.0.0.1:3001/character/17360,179,0,0
+1769784777347,173,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-77,text,true,,284,233,95,95,http://127.0.0.1:3001/character/15236,173,0,0
+1769784777349,172,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-30,text,true,,293,185,95,95,http://127.0.0.1:3001/character/10672,172,0,0
+1769784777351,172,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-4,text,true,,293,185,94,94,http://127.0.0.1:3001/character/17812,171,0,0
+1769784777353,171,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-58,text,false,,273,184,93,93,http://127.0.0.1:3001/character/3042,171,0,0
+1769784777354,171,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-49,text,true,,293,184,93,93,http://127.0.0.1:3001/character/6490,171,0,0
+1769784777356,171,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-40,text,false,,273,183,91,91,http://127.0.0.1:3001/character/306,171,0,0
+1769784777359,170,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-60,text,false,,273,184,90,90,http://127.0.0.1:3001/character/4125,170,0,0
+1769784777360,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-22,text,true,,293,185,89,89,http://127.0.0.1:3001/character/10345,170,0,0
+1769784777360,171,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-34,text,true,,293,184,89,89,http://127.0.0.1:3001/character/3847,171,0,0
+1769784777363,170,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-10,text,false,,273,185,87,87,http://127.0.0.1:3001/character/15671,170,0,0
+1769784777365,169,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-5,text,true,,293,185,86,86,http://127.0.0.1:3001/character/15034,169,0,0
+1769784777367,169,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-68,text,false,,273,184,85,85,http://127.0.0.1:3001/character/1036,169,0,0
+1769784777368,169,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-24,text,true,,293,185,84,84,http://127.0.0.1:3001/character/11851,169,0,0
+1769784777369,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-64,text,true,,293,184,83,83,http://127.0.0.1:3001/character/9216,170,0,0
+1769784777372,169,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-23,text,true,,293,185,82,82,http://127.0.0.1:3001/character/18427,169,0,0
+1769784777374,174,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-16,text,false,,273,184,81,81,http://127.0.0.1:3001/character/7883,174,0,0
+1769784777376,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-29,text,true,,293,185,81,81,http://127.0.0.1:3001/character/12783,173,0,0
+1769784777379,172,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-55,text,false,,273,184,79,79,http://127.0.0.1:3001/character/1435,172,0,0
+1769784777381,172,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-47,text,true,,293,184,78,78,http://127.0.0.1:3001/character/6484,172,0,0
+1769784777383,172,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-37,text,true,,293,185,77,77,http://127.0.0.1:3001/character/15384,172,0,0
+1769784777385,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-17,text,true,,293,185,76,76,http://127.0.0.1:3001/character/19760,173,0,0
+1769784777388,172,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-74,text,false,,273,184,75,75,http://127.0.0.1:3001/character/8588,172,0,0
+1769784777390,172,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-8,text,false,,273,183,74,74,http://127.0.0.1:3001/character/987,172,0,0
+1769784777391,174,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-48,text,true,,293,185,73,73,http://127.0.0.1:3001/character/10792,174,0,0
+1769784777394,173,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-66,text,false,,273,185,72,72,http://127.0.0.1:3001/character/12167,173,0,0
+1769784777397,173,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-62,text,false,,273,184,71,71,http://127.0.0.1:3001/character/7836,173,0,0
+1769784777397,174,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-13,text,true,,293,184,70,70,http://127.0.0.1:3001/character/5601,174,0,0
+1769784777400,174,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-31,text,false,,273,185,69,69,http://127.0.0.1:3001/character/12623,174,0,0
+1769784777402,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-19,text,true,,293,184,68,68,http://127.0.0.1:3001/character/7703,173,0,0
+1769784777403,174,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-44,text,true,,293,185,67,67,http://127.0.0.1:3001/character/18656,174,0,0
+1769784777404,176,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-76,text,false,,273,231,66,66,http://127.0.0.1:3001/character/9441,176,0,0
+1769784777406,176,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-46,text,true,,293,185,66,66,http://127.0.0.1:3001/character/18987,176,0,0
+1769784777408,175,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-3,text,true,,293,185,65,65,http://127.0.0.1:3001/character/11747,175,0,0
+1769784777408,177,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-50,text,true,,293,184,65,65,http://127.0.0.1:3001/character/4516,177,0,0
+1769784777412,175,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-7,text,true,,293,184,63,63,http://127.0.0.1:3001/character/6084,174,0,0
+1769784777413,175,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-9,text,true,,293,184,62,62,http://127.0.0.1:3001/character/5416,175,0,0
+1769784777416,175,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-38,text,false,,273,183,61,61,http://127.0.0.1:3001/character/841,175,0,0
+1769784777418,175,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-11,text,false,,273,184,60,60,http://127.0.0.1:3001/character/4411,174,0,0
+1769784777420,175,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-43,text,true,,293,185,59,59,http://127.0.0.1:3001/character/18156,175,0,0
+1769784777422,174,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-12,text,false,,273,184,58,58,http://127.0.0.1:3001/character/9583,174,0,0
+1769784777425,173,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-1,text,false,,273,184,57,57,http://127.0.0.1:3001/character/2718,173,0,0
+1769784777428,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-65,text,true,,293,185,56,56,http://127.0.0.1:3001/character/16236,173,0,0
+1769784777429,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-63,text,true,,293,184,55,55,http://127.0.0.1:3001/character/7011,173,0,0
+1769784777431,174,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-70,text,false,,273,184,54,54,http://127.0.0.1:3001/character/6450,173,0,0
+1769784777433,173,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-45,text,true,,293,184,53,53,http://127.0.0.1:3001/character/9508,173,0,0
+1769784777434,174,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-39,text,true,,293,184,52,52,http://127.0.0.1:3001/character/8043,174,0,0
+1769784777437,173,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-35,text,false,,273,185,51,51,http://127.0.0.1:3001/character/10977,173,0,0
+1769784777440,172,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-42,text,false,,273,184,50,50,http://127.0.0.1:3001/character/4211,172,0,0
+1769784777443,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-33,text,true,,293,185,49,49,http://127.0.0.1:3001/character/17340,170,0,0
+1769784777446,169,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-21,text,false,,273,183,48,48,http://127.0.0.1:3001/character/689,169,0,0
+1769784777449,168,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-61,text,false,,273,184,47,47,http://127.0.0.1:3001/character/1010,168,0,0
+1769784777452,167,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-18,text,false,,273,184,46,46,http://127.0.0.1:3001/character/3674,167,0,0
+1769784777454,167,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-2,text,false,,273,185,45,45,http://127.0.0.1:3001/character/15579,167,0,0
+1769784777456,166,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-15,text,true,,293,185,44,44,http://127.0.0.1:3001/character/13309,166,0,0
+1769784777458,167,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-32,text,false,,273,184,43,43,http://127.0.0.1:3001/character/3501,167,0,0
+1769784777460,167,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-27,text,true,,293,185,42,42,http://127.0.0.1:3001/character/11660,167,0,0
+1769784777463,167,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-28,text,false,,273,185,41,41,http://127.0.0.1:3001/character/10688,167,0,0
+1769784777463,168,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-72,text,true,,293,184,41,41,http://127.0.0.1:3001/character/7850,168,0,0
+1769784777466,169,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-56,text,false,,273,185,39,39,http://127.0.0.1:3001/character/11869,169,0,0
+1769784777468,169,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-52,text,false,,273,184,38,38,http://127.0.0.1:3001/character/5535,169,0,0
+1769784777469,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-25,text,true,,293,184,37,37,http://127.0.0.1:3001/character/5395,170,0,0
+1769784777472,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-73,text,true,,293,185,36,36,http://127.0.0.1:3001/character/19516,170,0,0
+1769784777474,170,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-54,text,true,,293,185,35,35,http://127.0.0.1:3001/character/12587,170,0,0
+1769784777477,170,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-26,text,false,,273,184,34,34,http://127.0.0.1:3001/character/6182,170,0,0
+1769784777480,171,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-6,text,true,,293,185,33,33,http://127.0.0.1:3001/character/12377,171,0,0
+1769784777481,172,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-59,text,true,,293,184,32,32,http://127.0.0.1:3001/character/9911,172,0,0
+1769784777484,172,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-71,text,false,,273,185,31,31,http://127.0.0.1:3001/character/10028,172,0,0
+1769784777486,173,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-36,text,false,,273,184,30,30,http://127.0.0.1:3001/character/5175,173,0,0
+1769784777488,174,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-20,text,true,,293,185,29,29,http://127.0.0.1:3001/character/18733,174,0,0
+1769784777490,175,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-67,text,true,,293,185,28,28,http://127.0.0.1:3001/character/12271,175,0,0
+1769784777492,177,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-69,text,true,,293,185,27,27,http://127.0.0.1:3001/character/12105,177,0,0
+1769784777494,178,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-78,text,true,,285,224,26,26,http://127.0.0.1:3001/character,178,0,0
+1769784777507,168,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-79,text,true,,280,162,26,26,http://127.0.0.1:3001/character/5647,168,0,0
+1769784773435,4255,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-80,text,true,,950798,158,26,26,http://127.0.0.1:3001/characters,4079,0,2
+1769784777518,203,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-75,text,true,,293,185,26,26,http://127.0.0.1:3001/character/17360,203,0,0
+1769784777520,205,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-77,text,true,,293,185,25,25,http://127.0.0.1:3001/character/15236,205,0,0
+1769784777581,149,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-76,text,false,,273,184,24,24,http://127.0.0.1:3001/character/9441,149,0,0
+1769784777673,75,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-78,text,true,,284,233,23,23,http://127.0.0.1:3001/character/18841,75,0,0
+1769784777677,73,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-79,text,true,,286,225,23,23,http://127.0.0.1:3001/character,73,0,0
+1769784777702,51,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-80,text,true,,281,163,23,23,http://127.0.0.1:3001/character/20302,51,0,0
+1769784773444,4320,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-81,text,true,,948921,158,23,23,http://127.0.0.1:3001/characters,4265,0,2
+1769784777747,50,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-78,text,true,,293,185,23,23,http://127.0.0.1:3001/character/18841,50,0,0
+1769784777750,49,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-79,text,true,,283,232,22,22,http://127.0.0.1:3001/character/5647,49,0,0
+1769784777753,47,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-80,text,true,,286,225,22,22,http://127.0.0.1:3001/character,47,0,0
+1769784777771,32,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-81,text,false,,273,162,22,22,http://127.0.0.1:3001/character/2730,32,0,0
+1769784773455,4364,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-82,text,true,,948871,158,22,22,http://127.0.0.1:3001/characters,4322,0,3
+1769784777800,61,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-79,text,true,,293,184,22,22,http://127.0.0.1:3001/character/5647,61,0,0
+1769784777801,65,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-80,text,true,,283,232,21,21,http://127.0.0.1:3001/character/20302,64,0,0
+1769784777804,62,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-81,text,true,,286,225,21,21,http://127.0.0.1:3001/character,62,0,0
+1769784777846,22,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-82,text,true,,279,162,21,21,http://127.0.0.1:3001/character/6502,22,0,0
+1769784773467,4412,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-83,text,true,,948871,158,21,21,http://127.0.0.1:3001/characters,4390,0,3
+1769784777866,29,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-80,text,true,,293,185,21,21,http://127.0.0.1:3001/character/20302,29,0,0
+1769784777867,31,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-81,text,false,,273,232,20,20,http://127.0.0.1:3001/character/2730,31,0,0
+1769784777869,29,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-82,text,true,,285,224,20,20,http://127.0.0.1:3001/character,29,0,0
+1769784777886,15,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-83,text,false,,273,162,20,20,http://127.0.0.1:3001/character/3544,15,0,0
+1769784773477,4432,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-84,text,true,,948871,158,20,20,http://127.0.0.1:3001/characters,4417,0,3
+1769784777898,25,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-81,text,false,,273,184,20,20,http://127.0.0.1:3001/character/2730,25,0,0
+1769784777898,27,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-82,text,true,,283,232,20,20,http://127.0.0.1:3001/character/6502,27,0,0
+1769784777901,25,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-83,text,true,,286,225,19,19,http://127.0.0.1:3001/character,25,0,0
+1769784777915,13,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-84,text,false,,273,162,19,19,http://127.0.0.1:3001/character/3477,13,0,0
+1769784773485,4452,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-85,text,true,,948868,158,19,19,http://127.0.0.1:3001/characters,4436,0,3
+1769784777925,27,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-82,text,true,,293,184,19,19,http://127.0.0.1:3001/character/6502,27,0,0
+1769784777927,28,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-83,text,false,,273,232,18,18,http://127.0.0.1:3001/character/3544,28,0,0
+1769784777929,28,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-84,text,true,,286,225,18,18,http://127.0.0.1:3001/character,28,0,0
+1769784777942,17,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-85,text,false,,273,162,18,18,http://127.0.0.1:3001/character/4244,17,0,0
+1769784773496,4473,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-86,text,true,,948919,158,18,18,http://127.0.0.1:3001/characters,4455,0,3
+1769784777956,27,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-83,text,false,,273,184,18,18,http://127.0.0.1:3001/character/3544,27,0,0
+1769784777957,30,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-84,text,false,,273,232,17,17,http://127.0.0.1:3001/character/3477,30,0,0
+1769784777959,29,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-85,text,true,,286,225,17,17,http://127.0.0.1:3001/character,29,0,0
+1769784777974,16,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-86,text,false,,273,163,17,17,http://127.0.0.1:3001/character/10154,16,0,0
+1769784773507,4499,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-87,text,true,,948917,158,17,17,http://127.0.0.1:3001/characters,4475,0,3
+1769784777988,32,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-84,text,false,,273,184,17,17,http://127.0.0.1:3001/character/3477,32,0,0
+1769784777988,35,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-85,text,false,,273,232,16,16,http://127.0.0.1:3001/character/4244,35,0,0
+1769784777991,32,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-86,text,true,,286,225,16,16,http://127.0.0.1:3001/character,32,0,0
+1769784778012,13,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-87,text,true,,281,163,16,16,http://127.0.0.1:3001/character/15549,13,0,0
+1769784773516,4517,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-88,text,true,,948964,158,16,16,http://127.0.0.1:3001/characters,4501,0,2
+1769784778023,25,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-85,text,false,,273,184,16,16,http://127.0.0.1:3001/character/4244,25,0,0
+1769784778024,26,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-86,text,false,,273,233,15,15,http://127.0.0.1:3001/character/10154,26,0,0
+1769784778026,25,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-87,text,true,,286,225,15,15,http://127.0.0.1:3001/character,25,0,0
+1769784778038,16,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-88,text,false,,273,162,15,15,http://127.0.0.1:3001/character/4107,16,0,0
+1769784773528,4539,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-89,text,true,,949011,158,15,15,http://127.0.0.1:3001/characters,4518,0,3
+1769784778051,38,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-86,text,false,,273,185,15,15,http://127.0.0.1:3001/character/10154,38,0,0
+1769784778052,39,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-87,text,true,,284,233,14,14,http://127.0.0.1:3001/character/15549,39,0,0
+1769784778055,37,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-88,text,true,,285,224,14,14,http://127.0.0.1:3001/character,37,0,0
+1769784778074,20,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-89,text,false,,273,163,14,14,http://127.0.0.1:3001/character/11278,20,0,0
+1769784773537,4564,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-90,text,true,,949058,158,14,14,http://127.0.0.1:3001/characters,4549,0,3
+1769784778091,25,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-87,text,true,,293,185,14,14,http://127.0.0.1:3001/character/15549,25,0,0
+1769784778093,26,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-88,text,false,,273,232,13,13,http://127.0.0.1:3001/character/4107,26,0,0
+1769784778095,25,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-89,text,true,,286,225,13,13,http://127.0.0.1:3001/character,25,0,0
+1769784778107,14,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-90,text,true,,281,163,13,13,http://127.0.0.1:3001/character/20213,14,0,0
+1769784773544,4585,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-91,text,true,,949107,158,13,13,http://127.0.0.1:3001/characters,4571,0,15
+1769784778120,27,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-88,text,false,,273,184,13,13,http://127.0.0.1:3001/character/4107,27,0,0
+1769784778120,30,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-89,text,false,,273,233,12,12,http://127.0.0.1:3001/character/11278,30,0,0
+1769784778122,29,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-90,text,true,,286,225,12,12,http://127.0.0.1:3001/character,29,0,0
+1769784778135,17,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-91,text,true,,281,163,12,12,http://127.0.0.1:3001/character/15784,17,0,0
+1769784778151,25,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-89,text,false,,273,185,12,12,http://127.0.0.1:3001/character/11278,25,0,0
+1769784778151,28,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-90,text,true,,284,233,11,11,http://127.0.0.1:3001/character/20213,28,0,0
+1769784778153,27,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-91,text,true,,286,225,11,11,http://127.0.0.1:3001/character,27,0,0
+1769784773563,4625,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-92,text,true,,949104,158,11,11,http://127.0.0.1:3001/characters,4584,0,3
+1769784773571,4631,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-93,text,true,,949151,158,11,11,http://127.0.0.1:3001/characters,4603,0,5
+1769784778180,34,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-90,text,true,,293,185,11,11,http://127.0.0.1:3001/character/20213,34,0,0
+1769784778181,35,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-91,text,true,,284,233,10,10,http://127.0.0.1:3001/character/15784,35,0,0
+1769784778203,15,HTTP Request | Get character by id,404,Not Found,Thread Group | HTTP Request: 1-92,text,false,,273,162,10,10,http://127.0.0.1:3001/character/2552,15,0,0
+1769784773575,4650,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-94,text,true,,949201,158,10,10,http://127.0.0.1:3001/characters,4636,0,3
+1769784778217,23,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-91,text,true,,293,185,10,10,http://127.0.0.1:3001/character/15784,23,0,0
+1769784778219,22,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-92,text,true,,286,225,9,9,http://127.0.0.1:3001/character,22,0,0
+1769784778209,33,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-93,text,true,,281,163,9,9,http://127.0.0.1:3001/character/10915,33,0,0
+1769784778232,13,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-94,text,true,,281,163,9,9,http://127.0.0.1:3001/character/18862,13,0,0
+1769784773586,4665,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-95,text,true,,949154,158,9,9,http://127.0.0.1:3001/characters,4651,0,4
+1769784778242,29,HTTP Request | Update character,404,Not Found,Thread Group | HTTP Request: 1-92,text,false,,273,232,9,9,http://127.0.0.1:3001/character/2552,29,0,0
+1769784778243,30,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-93,text,true,,285,224,9,9,http://127.0.0.1:3001/character,29,0,0
+1769784778246,28,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-94,text,true,,286,225,9,9,http://127.0.0.1:3001/character,28,0,0
+1769784778262,13,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-95,text,true,,281,163,9,9,http://127.0.0.1:3001/character/10827,13,0,0
+1769784773597,4689,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-96,text,true,,949151,158,9,9,http://127.0.0.1:3001/characters,4670,0,4
+1769784778272,33,HTTP Request | Delete character,404,Not Found,Thread Group | HTTP Request: 1-92,text,false,,273,184,9,9,http://127.0.0.1:3001/character/2552,33,0,0
+1769784778273,34,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-93,text,true,,283,232,8,8,http://127.0.0.1:3001/character/10915,34,0,0
+1769784778275,34,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-94,text,true,,284,233,8,8,http://127.0.0.1:3001/character/18862,34,0,0
+1769784778276,34,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-95,text,true,,286,225,8,8,http://127.0.0.1:3001/character,34,0,0
+1769784778293,18,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-96,text,true,,280,162,8,8,http://127.0.0.1:3001/character/8734,18,0,0
+1769784773606,4711,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-97,text,true,,949244,158,8,8,http://127.0.0.1:3001/characters,4694,0,3
+1769784778307,28,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-93,text,true,,293,185,8,8,http://127.0.0.1:3001/character/10915,28,0,0
+1769784778310,26,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-94,text,true,,293,185,8,8,http://127.0.0.1:3001/character/18862,26,0,0
+1769784778311,29,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-95,text,true,,283,232,6,6,http://127.0.0.1:3001/character/10827,29,0,0
+1769784778312,28,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-96,text,true,,286,225,6,6,http://127.0.0.1:3001/character,28,0,0
+1769784778322,20,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-97,text,true,,281,163,6,6,http://127.0.0.1:3001/character/11860,20,0,0
+1769784773614,4737,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-98,text,true,,949296,158,6,6,http://127.0.0.1:3001/characters,4721,0,2
+1769784778340,31,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-95,text,true,,293,185,6,6,http://127.0.0.1:3001/character/10827,30,0,0
+1769784778340,32,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-96,text,true,,283,232,6,6,http://127.0.0.1:3001/character/8734,32,0,0
+1769784778342,31,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-97,text,true,,286,225,5,5,http://127.0.0.1:3001/character,31,0,0
+1769784778358,17,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-98,text,true,,280,162,5,5,http://127.0.0.1:3001/character/8637,17,0,0
+1769784773624,4760,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-99,text,true,,949246,158,5,5,http://127.0.0.1:3001/characters,4738,0,4
+1769784778373,24,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-96,text,true,,293,184,5,5,http://127.0.0.1:3001/character/8734,24,0,0
+1769784778373,27,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-97,text,true,,284,233,4,4,http://127.0.0.1:3001/character/11860,27,0,0
+1769784778376,25,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-98,text,true,,286,225,4,4,http://127.0.0.1:3001/character,25,0,0
+1769784778388,15,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-99,text,true,,281,163,4,4,http://127.0.0.1:3001/character/10224,15,0,0
+1769784778401,8,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-97,text,true,,293,185,4,4,http://127.0.0.1:3001/character/11860,8,0,0
+1769784778402,9,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-98,text,true,,283,232,3,3,http://127.0.0.1:3001/character/8637,9,0,0
+1769784778404,10,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-99,text,true,,286,225,3,3,http://127.0.0.1:3001/character,10,0,0
+1769784778413,5,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-98,text,true,,293,184,3,3,http://127.0.0.1:3001/character/8637,5,0,0
+1769784778414,8,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-99,text,true,,284,233,2,2,http://127.0.0.1:3001/character/10224,8,0,0
+1769784773635,4779,HTTP Request | Get all characters,200,OK,Thread Group | HTTP Request: 1-100,text,true,,949247,158,3,3,http://127.0.0.1:3001/characters,4761,0,3
+1769784778424,3,HTTP Request | Get character by id,200,OK,Thread Group | HTTP Request: 1-100,text,true,,280,162,2,2,http://127.0.0.1:3001/character/2379,3,0,0
+1769784778423,5,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-99,text,true,,293,185,2,2,http://127.0.0.1:3001/character/10224,5,0,0
+1769784778427,4,HTTP Request | Create character,201,Created,Thread Group | HTTP Request: 1-100,text,true,,286,225,1,1,http://127.0.0.1:3001/character,4,0,0
+1769784778431,4,HTTP Request | Update character,200,OK,Thread Group | HTTP Request: 1-100,text,true,,283,232,1,1,http://127.0.0.1:3001/character/2379,4,0,0
+1769784778435,4,HTTP Request | Delete character,200,OK,Thread Group | HTTP Request: 1-100,text,true,,293,184,1,1,http://127.0.0.1:3001/character/2379,4,0,0

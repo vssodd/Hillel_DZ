@@ -1,0 +1,57 @@
+Перейдите на Docker Hub по следующей ссылке:
+https://hub.docker.com/r/oleksandrgolubishko/qa_pro_rest_app
+
+Запустите приложение в контейнере с помощью команды:
+
+docker run -p 3001:3001 oleksandrgolubishko/qa_pro_rest_app
+
+
+Переменные в Thread Group
+
+В обоих файлах должны быть следующие значения в Thread Group:
+
+Number of Threads (users):
+${__P(threads,1)}
+
+Ramp-up period (seconds):
+${__P(rampup,1)}
+
+Loop Count:
+
+для DZ_21_1.jmx: ${__P(loops,1)}
+
+для DZ_21_1_Loop_count_Infinity.jmx: -1 (Infinity)
+
+1) Прогоны Loop Count
+
+Файл: DZ_21_1.jmx
+Назначение: 100/1000/5000 пользователей и фиксированный Loop Count.
+
+Run #1 — 100 users | Ramp-up 1 | Loop 1
+
+jmeter -n -t DZ_21_1.jmx -Jthreads=100 -Jrampup=1 -Jloops=1 -l 01.jtl -e -o report_01_100users_loop1
+
+Run #2 — 1000 users | Ramp-up 1 | Loop 2
+
+jmeter -n -t DZ_21_1.jmx -Jthreads=1000 -Jrampup=1 -Jloops=2 -l 02.jtl -e -o report_02_1000users_loop2
+
+Run #3 — 5000 users | Ramp-up 1 | Loop 4
+
+jmeter -n -t DZ_21_1.jmx -Jthreads=5000 -Jrampup=1 -Jloops=4 -l 03.jtl -e -o report_03_5000users_loop4
+
+3) Прогоны Infinity + Duration
+
+Файл: DZ_21_1_Loop_count_Infinity.jmx
+Назначение: Loop = Infinity, управление длительностью через Scheduler и -Jduration.
+
+Run #4 — 1000 users | Ramp-up 2 | Duration 30 sec
+
+jmeter -n -t DZ_21_1_Loop_count_Infinity.jmx -Jthreads=1000 -Jrampup=2 -Jduration=30 -l 04.jtl -e -o report_04_1000users_30sec
+
+Run #5 — 5000 users | Ramp-up 3 | Duration 60 sec
+
+jmeter -n -t DZ_21_1_Loop_count_Infinity.jmx -Jthreads=5000 -Jrampup=3 -Jduration=60 -l 05.jtl -e -o report_05_5000users_60sec
+
+Run #6 — 10000 users | Ramp-up 5 | Duration 180 sec
+
+jmeter -n -t DZ_21_1_Loop_count_Infinity.jmx -Jthreads=10000 -Jrampup=5 -Jduration=180 -l 06.jtl -e -o report_06_10000users_180sec
