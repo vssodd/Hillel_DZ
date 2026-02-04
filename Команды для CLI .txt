@@ -1,0 +1,11 @@
+cd "YOUR_JMETER_DIRECTORY\bin"
+
+.\jmeter.bat -n `
+-t "YOUR_PROJECT_DIRECTORY\DZ_21_1.jmx" `
+-Jthreads=100 `
+-Jrampup=1 `
+-Jloops=1 `
+-Jduration=1 `
+-l "YOUR_PROJECT_DIRECTORY\01_100users_loop1.jtl" `
+-e `
+-o "YOUR_PROJECT_DIRECTORY\report_01_100users_loop1"
