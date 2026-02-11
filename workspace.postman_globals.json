@@ -1,0 +1,33 @@
+{
+	"id": "ab06142a-ba6a-4d2e-8108-e2a9230f501a",
+	"values": [
+		{
+			"key": "car_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "last_car_title",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "$randomCarName",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "randomCarName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2026-02-11T10:33:13.275Z",
+	"_postman_exported_using": "Postman/11.84.2"
+}

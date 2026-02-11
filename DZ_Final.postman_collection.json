@@ -1,0 +1,390 @@
+{
+  "info": {
+    "_postman_id": "6c3ff9f1-5e93-4a72-9f6a-d582996ed4f0",
+    "name": "DZ_Final",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47090641",
+    "_collection_link": "https://go.postman.co/collection/47090641-6c3ff9f1-5e93-4a72-9f6a-d582996ed4f0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Cтворення нового документа",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус відповіді — 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "const jsonData = pm.response.json();",
+              "const requestData = JSON.parse(pm.request.body ? pm.request.body.raw : '{}');",
+              "",
+              "pm.test(\"Назва (title) збігається з надісланою\", function () {",
+              "    pm.expect(jsonData.title).to.eql(requestData.title);",
+              "});",
+              "",
+              "pm.test(\"ID бренду (carBrandId) збігається з надісланим\", function () {",
+              "    pm.expect(jsonData.carBrandId).to.eql(requestData.carBrandId);",
+              "});",
+              "",
+              "pm.test(\"Поле title не є null\", function () {",
+              "    pm.expect(jsonData.title).to.not.be.null;",
+              "});",
+              "",
+              "pm.test(\"Поле title не є порожнім рядком\", function () {",
+              "    pm.expect(jsonData.title).to.not.eql(\"\");",
+              "});",
+              "",
+              "pm.test(\"Сервер повернув ID нового документа (_id)\", function () {",
+              "    pm.expect(jsonData._id).to.exist;",
+              "});",
+              "",
+              "pm.test(\"Поле title має тип string\", function () {",
+              "    pm.expect(jsonData.title).to.be.a('string');",
+              "});",
+              "",
+              "pm.globals.set(\"car_id\", jsonData._id);",
+              "pm.globals.set(\"last_car_title\", jsonData.title);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "const cars = [",
+              "    \"BMW\", ",
+              "    \"Audi\", ",
+              "    \"Mercedes-Benz\", ",
+              "    \"Volkswagen\", ",
+              "    \"Porsche\", ",
+              "    \"Lexus\", ",
+              "    \"Toyota\", ",
+              "    \"Honda\", ",
+              "    \"Tesla\", ",
+              "    \"Volvo\"",
+              "];",
+              "",
+              "const randomCar = cars[Math.floor(Math.random() * cars.length)];",
+              "",
+              "pm.globals.set(\"randomCarName\", randomCar);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"carBrandId\":\"6984b21d93e5ca20b0fe5843\",\"title\":\"{{randomCarName}}\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/carsHillel",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "carsHillel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Перевірка на наявність документа",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус відповіді — 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"ID документа збігається з глобальною змінною\", function () {\r",
+              "    pm.expect(jsonData._id).to.eql(pm.globals.get(\"car_id\"));\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Назва (title) збігається з очікуваною\", function () {\r",
+              "    const expectedTitle = pm.globals.get(\"last_car_title\");\r",
+              "    pm.expect(jsonData.title).to.eql(expectedTitle);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле title не є null\", function () {\r",
+              "    pm.expect(jsonData.title).to.not.be.null;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле title не є порожнім рядком\", function () {\r",
+              "    pm.expect(jsonData.title).to.not.eql(\"\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле title має тип string\", function () {\r",
+              "    pm.expect(jsonData.title).to.be.a('string');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/carsHillel/{{car_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "carsHillel",
+            "{{car_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Оновлення документа та перевірка змін",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус відповіді — 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "const requestData = JSON.parse(pm.request.body.raw);\r",
+              "\r",
+              "pm.test(\"Назва (title) успішно змінена\", function () {\r",
+              "    pm.expect(jsonData.title).to.eql(requestData.title);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле updatedAt існує\", function () {\r",
+              "    pm.expect(jsonData.updatedAt).to.exist;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Ціна (price) відповідає значенню в запиті\", function () {\r",
+              "    pm.expect(jsonData.price).to.eql(requestData.price);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле price має тип number\", function () {\r",
+              "    pm.expect(jsonData.price).to.be.a('number');\r",
+              "});\r",
+              "\r",
+              "pm.globals.set(\"last_car_title\", jsonData.title);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Dacia Turbo\",\r\n  \"price\": 85000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/carsHillel/{{car_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "carsHillel",
+            "{{car_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Фільтрація та пошук",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус відповіді — 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "const car = jsonData[0];\r",
+              "\r",
+              "pm.test(\"Назва автомобіля збігається з очікуваною\", function () {\r",
+              "    const expectedTitle = pm.globals.get(\"last_car_title\");\r",
+              "    pm.expect(car.title).to.eql(expectedTitle);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Ціна відповідає оновленим даним\", function () {\r",
+              "    pm.expect(car.price).to.be.a('number');\r",
+              "});\r",
+              "\r",
+              "pm.test(\"ID бренду (carBrandId) відповідає заданому\", function () {\r",
+              "    pm.expect(car.carBrandId).to.eql(\"6984b21d93e5ca20b0fe5843\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле title не є порожнім або null\", function () {\r",
+              "    pm.expect(car.title).to.not.be.null;\r",
+              "    pm.expect(car.title).to.not.eql(\"\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле carBrandId заповнене\", function () {\r",
+              "    pm.expect(car.carBrandId).to.not.be.null;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле createdAt існує в документі\", function () {\r",
+              "    pm.expect(car.createdAt).to.exist;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Поле updatedAt існує в документі\", function () {\r",
+              "    pm.expect(car.updatedAt).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/carsHillel/search/query?_id={{car_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "carsHillel",
+            "search",
+            "query"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "{{car_id}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Видалення документу та перевірка його наявності",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус 200: видалення підтверджено\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "    pm.expect(pm.response.json().message).to.include(\"видалено\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/carsHillel/{{car_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "carsHillel",
+            "{{car_id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
